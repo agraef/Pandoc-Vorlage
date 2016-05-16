@@ -33,6 +33,8 @@
 # make beamer: generiert pdf-Folien mit Beamer
 # make dzslides: generiert html-Folien mit dzslides
 # make revealjs: generiert html-Folien mit reveal.js
+# make world: generiere alle Formate (html, pdf, beamer, revealjs, epub)
+# make zip: generiere ZIP-Datei
 # make media: generiert alle benötigten Mediendateien (Lilypond-Partituren)
 # bzw. lädt diese herunter (YouTube-Videos)
 
@@ -48,10 +50,13 @@
 # VORSICHT: make realclean löscht u.U. Grafikdateien, die spezielle Tools
 # (Lilypond, Ghostscript, ImageMagick) benötigen, um neu erstellt zu werden!
 
+# Projektname, wird zur Generierung der ZIP-Datei verwendet.
+name = Pandoc-Vorlage
+
 # Template-Variablen, vgl. http://pandoc.org/README.html#templates. Man
-# beachte, dass die meisten dieser Einstellungen auch im YAML-Header des Dokuments
-# stehen können. Falls sie über Kommandozeilenoptionen angegeben werden,
-# werden die im YAML-Header gewählten Optionen überschrieben.
+# beachte, dass die meisten dieser Einstellungen auch im YAML-Header des
+# Dokuments stehen können. Falls sie über Kommandozeilenoptionen angegeben
+# werden, werden die im YAML-Header gewählten Optionen überschrieben.
 
 # LaTeX-Font setzen
 # LaTeX Font-Paket
@@ -61,6 +66,7 @@
 # System-Fonts
 #font += -V "mainfont:Arial"
 #font += -V "mainfont:Palatino"
+#font += -V "mainfont:Palatino Linotype"
 #font += -V "mainfont:Minion Pro"
 #font += -V "mainfontoptions:Numbers=OldStyle"
 #font += -V "monofont:Bitstream Vera Sans Mono"
@@ -183,7 +189,7 @@ media = $(ly:.ly=.pdf) $(ly:.ly=.png)
 # Videos zum Einbetten (YouTube-Download; benötigt youtube-dl)
 media += future.mp4
 
-.PHONY: all world beamer dzslides revealjs html epub pdf media clean realclean
+.PHONY: all world beamer dzslides revealjs html epub pdf media clean realclean zip
 
 # 'make': baut normales PDF-Dokument
 all: pdf
@@ -258,6 +264,11 @@ dpi = 300
 
 %.png: %.pdf
 	convert -density $(dpi) $< -trim +repage $@
+
+# ZIP-Datei erstellen.
+
+zip:
+	git archive HEAD --format=zip > $(name).zip
 
 # Aufräumen (Löschen aller erzeugten Dateien). Achtung: 'make realclean'
 # löscht auch die aus Lilypond-Partituren erzeugten Grafik-Dateien, die nur
