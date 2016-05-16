@@ -268,7 +268,7 @@ dpi = 300
 # ZIP-Datei erstellen.
 
 zip:
-	git archive HEAD --format=zip > $(name).zip
+	git archive HEAD --format=zip --prefix=$(name)/ > $(name).zip
 
 # Aufräumen (Löschen aller erzeugten Dateien). Achtung: 'make realclean'
 # löscht auch die aus Lilypond-Partituren erzeugten Grafik-Dateien, die nur
