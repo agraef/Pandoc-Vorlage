@@ -1,0 +1,12 @@
+\logo{\includegraphics[height=2cm]{logo.png}}
+\def\LOF{\listoffigures} \def\LOT{\listoftables}
+% make sure that links are highlighted in beamer
+\usepackage{hyperref}
+\hypersetup{ colorlinks=true,urlcolor=blue }
+% Pandoc's beamer template enables figure and table captions which interfere
+% with pandoc-crossref's, so we get rid of them. -ag
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\captionsetup{font=normalsize,labelfont=normalsize}
+\makeatletter
+\def\fnum@table{}
+\makeatother

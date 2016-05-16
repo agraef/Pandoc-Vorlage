@@ -1,0 +1,14 @@
+/* Minmaler Style für die HTML-Ausgabe */
+body { margin: 2%; text-align: justify; font-size: medium; font-family:"Minion Pro",Palatino,serif,Arial,Verdana,sans-serif; }
+code { font-family: monospace; }
+h1 { text-align: left; }
+h2 { text-align: left; }
+h3 { text-align: left; }
+h4 { text-align: left; }
+h5 { text-align: left; }
+h6 { text-align: left; }
+h1.title { }
+h2.author { }
+h3.date { }
+ol.toc { padding: 0; margin-left: 1em; }
+ol.toc li { list-style-type: none; margin: 0; padding: 0; }
