@@ -138,6 +138,12 @@ Pandoc unterstützt diverse gängige Eingabe-Formate für Tabellen.\
 - **Tipp:** automatische Wandlung von EPUB in das MOBI-Format (Amazon/Kindle)
   ist möglich z.B. mit [KindleGen] (mit Einschränkungen)
 
+[dzslides]: https://github.com/paulrouget/dzslides
+[revealjs]: https://github.com/hakimel/reveal.js
+[beamer]: https://de.wikipedia.org/wiki/Beamer_(LaTeX)
+[epub]: https://de.wikipedia.org/wiki/EPUB
+[KindleGen]: http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211
+
 # revealjs-Bedienung
 
 - Leertaste, Pfeiltasten, `n` und `p`: Navigation
@@ -157,12 +163,6 @@ Pandoc unterstützt diverse gängige Eingabe-Formate für Tabellen.\
 - werden *nicht* auf der Folie angezeigt
 - Anzeige wird derzeit nur von `reveal.js` unterstützt
 </div>
-
-[dzslides]: https://github.com/paulrouget/dzslides
-[revealjs]: https://github.com/hakimel/reveal.js
-[beamer]: https://de.wikipedia.org/wiki/Beamer_(LaTeX)
-[epub]: https://de.wikipedia.org/wiki/EPUB
-[KindleGen]: http://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211
 
 # Editoren
 
