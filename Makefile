@@ -51,7 +51,7 @@
 # (Lilypond, Ghostscript, ImageMagick) benötigen, um neu erstellt zu werden!
 
 # Projektname, wird zur Generierung der ZIP-Datei verwendet.
-name = Pandoc-Vorlage
+name = Markdown-Text
 
 # Template-Variablen, vgl. http://pandoc.org/README.html#templates. Man
 # beachte, dass die meisten dieser Einstellungen auch im YAML-Header des
