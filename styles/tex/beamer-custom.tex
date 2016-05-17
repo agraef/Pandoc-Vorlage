@@ -3,10 +3,35 @@
 % make sure that links are highlighted in beamer
 \usepackage{hyperref}
 \hypersetup{ colorlinks=true,urlcolor=blue }
+
 % Pandoc's beamer template enables figure and table captions which interfere
 % with pandoc-crossref's, so we get rid of them. -ag
+\usepackage{caption}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 \captionsetup{font=normalsize,labelfont=normalsize}
 \makeatletter
 \def\fnum@table{}
 \makeatother
+
+% Scale images so that, unless explicit options are given, the image width
+% will not exceed the width of the page. Images get their normal width if
+% they fit onto the page, but are scaled down if they would overflow the
+% margins.
+\usepackage{graphicx}
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>0.8\textwidth
+    0.8\textwidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\def\ScaleIfNeededH{%
+  \ifdim\Gin@nat@height>0.8\textheight
+    0.8\textheight
+  \else
+    \Gin@nat@height
+  \fi
+}
+\makeatother
+\setkeys{Gin}{width=\ScaleIfNeeded,height=\ScaleIfNeededH,keepaspectratio}
