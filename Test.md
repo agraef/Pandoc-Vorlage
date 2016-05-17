@@ -196,7 +196,7 @@ Markdown-Unterstützung und -Vorschau.
 
     - Import von bibliographischen Daten in diversen Formaten, auch direkt aus
       Online-Literaturdatenbanken wie [BMS], [RISM] und [Google Scholar]
-	- Export ins [BibTeX]-Format
+	- Export ins [BibTeX]-Format, Einfügen der Zitierschlüssel mit [BBT]
 	- umfangreiches [Repositorium] mit Zitierstilen im [CSL]-Format
 	- BibTeX-Datenbanken und CSL-Dateien können direkt mit Pandoc verwendet
 	  werden
@@ -211,6 +211,7 @@ Markdown-Unterstützung und -Vorschau.
 
 [Repositorium]: https://www.zotero.org/styles
 [BibTeX]: http://www.bibtex.org/de/
+[BBT]: https://github.com/retorquere/zotero-better-bibtex
 [CSL]: http://citationstyles.org/
 [BMS]: http://www.musikbibliographie.de/
 [RISM]: http://de.rism.info/
